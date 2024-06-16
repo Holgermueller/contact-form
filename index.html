@@ -41,10 +41,16 @@
 
           <fieldset>
             <legend>Query Type</legend>
-            <input type="radio" name="query" id="general" value="general" />
-            <label for="general">General Enquiry </label>
-            <input type="radio" name="query" id="support" value="support" />
-            <label for="support">Support Request</label>
+
+            <div class="radio-container">
+              <input type="radio" name="query" id="general" value="general" />
+              <label for="general">General Enquiry </label>
+            </div>
+
+            <div class="radio-container">
+              <input type="radio" name="query" id="support" value="support" />
+              <label for="support">Support Request</label>
+            </div>
           </fieldset>
           <p class="error">Please select a query type</p>
 
@@ -62,8 +68,12 @@
         </form>
       </section>
 
-      <section class="success">
-        <h2>Message Sent!</h2>
+      <section class="success" id="success">
+        <header>
+          <img src="assets/images/icon-success-check.svg" alt="" />
+          <h2>Message Sent!</h2>
+        </header>
+
         <p>Thanks for completing the form. We'll be in touch soon!</p>
       </section>
 
