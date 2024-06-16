@@ -29,22 +29,24 @@
         <form action="" id="contactForm">
           <label for="firstName">First Name</label>
           <input type="text" name="firstName" id="firstName" required />
-          <p class="error">This field is required</p>
+          <p class="error" id="firstNameError">This field is required</p>
 
           <label for="lastName">Last Name</label>
           <input type="text" name="lastName" id="lastName" required />
-          <p class="error">This field is required</p>
+          <p class="error" id="lastNameError">This field is required</p>
 
           <label for="email" autocomplete="email">Email</label>
           <input type="email" name="email" id="email" required />
-          <p class="error">Please enter a valid email address</p>
+          <p class="error" id="emailError">
+            Please enter a valid email address
+          </p>
 
           <fieldset>
             <legend>Query Type</legend>
 
             <div class="radio-container">
               <input type="radio" name="query" id="general" value="general" />
-              <label for="general">General Enquiry </label>
+              <label for="general">General Enquiry</label>
             </div>
 
             <div class="radio-container">
@@ -52,27 +54,27 @@
               <label for="support">Support Request</label>
             </div>
           </fieldset>
-          <p class="error">Please select a query type</p>
+          <p class="error" id="fieldSetError">Please select a query type</p>
 
           <label for="message">Message</label>
           <textarea name="message" id="message" required></textarea>
-          <p class="error">This field is required</p>
+          <p class="error" id="messageError">This field is required</p>
 
           <input type="checkbox" name="consent" id="consent" />
           <label for="consent"> I consent to being contacted by the team</label>
-          <p class="error">
+          <p class="error" id="consentError">
             To submit this form, please consent to being contacted
           </p>
 
-          <input type="button" value="Submit" />
+          <input type="button" value="Submit" id="submit" />
         </form>
       </section>
 
       <section class="success" id="success">
-        <header>
+        <div class="success-header">
           <img src="assets/images/icon-success-check.svg" alt="" />
           <h2>Message Sent!</h2>
-        </header>
+        </div>
 
         <p>Thanks for completing the form. We'll be in touch soon!</p>
       </section>

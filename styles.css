@@ -18,10 +18,12 @@ main {
 h1 {
   color: hsl(187, 24%, 22%);
   font-size: 2rem;
+  margin-bottom: 32px;
 }
 
-label,
+input,
 legend {
+  margin-right: 8px;
   color: hsl(187, 24%, 22%);
 }
 
@@ -32,6 +34,17 @@ textarea {
   border-radius: 10px;
   width: 100%;
   padding: 16px 8px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+label[for="firstName"]:after,
+label[for="lastName"]:after,
+label[for="email"]:after,
+label[for="message"]:after,
+label[for="consent"]:after,
+legend::after {
+  content: " *";
 }
 
 input:hover,
@@ -49,6 +62,8 @@ textarea:focus {
 fieldset {
   border: 0;
   padding: 0;
+  margin-top: 8px;
+  margin-bottom: 32px;
 }
 
 .radio-container {
@@ -63,13 +78,17 @@ input[type="radio"] {
   accent-color: hsl(169, 82%, 27%);
 }
 
-input[type="radio"]:checked + label {
+.radio-container:has(input[type="radio"]:checked + label) {
   color: hsl(169, 82%, 27%);
   background-color: hsl(148, 38%, 91%);
+  border: 2px solid hsl(169, 82%, 27%);
+  accent-color: hsl(169, 82%, 27%);
 }
 
 .error {
   color: hsl(0, 66%, 54%);
+  margin-bottom: 16px;
+  display: none;
 }
 
 input[type="button"] {
@@ -80,6 +99,8 @@ input[type="button"] {
   width: 100%;
   padding: 16px;
   font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 18px;
 }
 
 .success {
@@ -89,7 +110,7 @@ input[type="button"] {
   padding: 8%;
 }
 
-.success header {
+.success-header {
   display: flex;
   flex-direction: row;
   align-items: center;
