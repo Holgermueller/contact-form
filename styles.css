@@ -1,0 +1,61 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: hsl(148, 38%, 91%);
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  width: 95%;
+  margin: 7% auto;
+  padding: 3% 6%;
+  border-radius: 10px;
+}
+
+h1,
+h2 {
+  color: hsl(187, 24%, 22%);
+  font-size: 2rem;
+}
+
+label,
+legend {
+  color: hsl(187, 24%, 22%);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+  width: 100%;
+  padding: 16px 8px;
+}
+
+fieldset {
+  border: 0;
+}
+
+.error {
+  color: hsl(0, 66%, 54%);
+}
+
+input[type="button"] {
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  width: 100%;
+  padding: 16px;
+  font-size: 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
