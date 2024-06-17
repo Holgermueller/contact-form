@@ -47,12 +47,6 @@ legend::after {
   content: " *";
 }
 
-input:hover,
-textarea:hover,
-label:hover {
-  cursor: pointer;
-}
-
 input:focus,
 textarea:focus {
   border: 2px solid hsl(169, 82%, 27%);
@@ -83,6 +77,11 @@ input[type="radio"] {
   background-color: hsl(148, 38%, 91%);
   border: 2px solid hsl(169, 82%, 27%);
   accent-color: hsl(169, 82%, 27%);
+}
+
+label[for="general"],
+label[for="support"] {
+  width: 100%;
 }
 
 input[type="checkbox"]:checked {
@@ -146,7 +145,12 @@ h2 {
     width: 60%;
   }
 
-  input[type="text"] {
+  .name-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .first-last-container {
     width: 49%;
   }
 
@@ -158,5 +162,15 @@ h2 {
 
   .radio-container {
     width: 49%;
+  }
+
+  input:hover,
+  textarea:hover,
+  label:hover {
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover {
+    background-color: hsl(170, 80%, 14%);
   }
 }

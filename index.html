@@ -27,13 +27,19 @@
       <section class="form">
         <h1>Contact Us</h1>
         <form action="" id="contactForm">
-          <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName" required />
-          <p class="error" id="firstNameError">This field is required</p>
+          <div class="name-container">
+            <div class="first-last-container">
+              <label for="firstName">First Name</label>
+              <input type="text" name="firstName" id="firstName" required />
+              <p class="error" id="firstNameError">This field is required</p>
+            </div>
 
-          <label for="lastName">Last Name</label>
-          <input type="text" name="lastName" id="lastName" required />
-          <p class="error" id="lastNameError">This field is required</p>
+            <div class="first-last-container">
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" required />
+              <p class="error" id="lastNameError">This field is required</p>
+            </div>
+          </div>
 
           <label for="email" autocomplete="email">Email</label>
           <input type="email" name="email" id="email" required />
@@ -41,7 +47,7 @@
             Please enter a valid email address
           </p>
 
-          <fieldset>
+          <fieldset id="queryType">
             <legend>Query Type</legend>
 
             <div class="radio-container">
@@ -60,13 +66,18 @@
           <textarea name="message" id="message" required></textarea>
           <p class="error" id="messageError">This field is required</p>
 
-          <input type="checkbox" name="consent" id="consent" />
+          <input type="checkbox" name="consent" id="consent" required />
           <label for="consent"> I consent to being contacted by the team</label>
           <p class="error" id="consentError">
             To submit this form, please consent to being contacted
           </p>
 
-          <input type="button" value="Submit" id="submit" />
+          <input
+            onclick="submitForm()"
+            type="button"
+            value="Submit"
+            id="submit"
+          />
         </form>
       </section>
 
@@ -85,5 +96,7 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </footer>
     </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
