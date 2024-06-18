@@ -35,7 +35,6 @@ textarea {
   width: 100%;
   padding: 16px 8px;
   margin-top: 12px;
-  margin-bottom: 24px;
 }
 
 label[for="firstName"]:after,
@@ -57,7 +56,7 @@ fieldset {
   border: 0;
   padding: 0;
   margin-top: 8px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .radio-container {
@@ -90,7 +89,8 @@ input[type="checkbox"]:checked {
 
 .error {
   color: hsl(0, 66%, 54%);
-  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 32px;
   display: none;
 }
 
