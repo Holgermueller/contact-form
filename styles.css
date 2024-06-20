@@ -8,9 +8,12 @@ html {
 }
 
 main {
-  background-color: hsl(0, 0%, 100%);
   width: 95%;
   margin: 7% auto;
+}
+
+.form {
+  background-color: hsl(0, 0%, 100%);
   padding: 3% 6%;
   border-radius: 10px;
 }
@@ -134,7 +137,7 @@ input[type="button"] {
   background-color: hsl(187, 24%, 22%);
   color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  padding: 8%;
+  padding: 4%;
   display: none;
 }
 
@@ -167,6 +170,16 @@ h2 {
 @media screen and (min-width: 600px) {
   main {
     width: 60%;
+  }
+
+  .success {
+    width: max-content;
+    margin: auto;
+    height: max-content;
+  }
+
+  .form {
+    width: 100%;
   }
 
   .name-container {

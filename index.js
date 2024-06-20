@@ -59,6 +59,9 @@ const submitForm = () => {
   } else if (checked === false) {
     document.getElementById("consentError").style.display = "block";
   } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.getElementById("success").style.display = "block";
+
     console.log("success");
   }
 };
