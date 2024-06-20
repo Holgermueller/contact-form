@@ -40,8 +40,7 @@ textarea {
 label[for="firstname"],
 label[for="lastName"],
 label[for="email"],
-label[for="message"],
-input[type="checkbox"] {
+label[for="message"] {
   display: inline-block;
   margin-top: 32px;
 }
@@ -94,6 +93,18 @@ input[type="radio"] {
 label[for="general"],
 label[for="support"] {
   width: 100%;
+}
+
+.checkbox-and-label-container {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+}
+
+label[for="consent"] {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
 }
 
 input[type="checkbox"]:checked {
