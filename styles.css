@@ -37,6 +37,19 @@ textarea {
   margin-top: 12px;
 }
 
+label[for="firstname"],
+label[for="lastName"],
+label[for="email"],
+label[for="message"],
+input[type="checkbox"] {
+  display: inline-block;
+  margin-top: 32px;
+}
+
+legend {
+  padding-top: 32px;
+}
+
 label[for="firstName"]:after,
 label[for="lastName"]:after,
 label[for="email"]:after,
@@ -152,6 +165,10 @@ h2 {
 
   .first-last-container {
     width: 49%;
+  }
+
+  label[for="lastName"] {
+    margin-top: 0;
   }
 
   fieldset {

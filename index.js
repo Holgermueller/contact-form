@@ -16,8 +16,35 @@ radios.forEach((radio) => {
 });
 
 const submitForm = () => {
-  //Check if form is valid
   let checked = document.getElementById("consent").checked;
+
+  document.onkeyup = function () {
+    let fNameError = document.getElementById("firstNameError");
+    let fName = document.getElementById("firstName");
+    if (fName.value.length === 0) return;
+    fNameError.style.display = "none";
+  };
+
+  document.onkeyup = function () {
+    let lNameError = document.getElementById("lastNameError");
+    let lName = document.getElementById("lastName");
+    if (lName.value.length === 0) return;
+    lNameError.style.display = "none";
+  };
+
+  document.onkeyup = function () {
+    let emailError = document.getElementById("emailError");
+    let email = document.getElementById("email");
+    if (email.value.length === 0) return;
+    emailError.style.display = "none";
+  };
+
+  document.onkeyup = function () {
+    let messageError = document.getElementById("messageError");
+    let message = document.getElementById("message");
+    if (message.value.length === 0) return;
+    messageError.style.display = "none";
+  };
 
   if (firstName.value === "") {
     document.getElementById("firstNameError").style.display = "block";
@@ -34,4 +61,12 @@ const submitForm = () => {
   } else {
     console.log("success");
   }
+};
+
+const removeFieldsetError = () => {
+  document.getElementById("fieldSetError").style.display = "none";
+};
+
+const removeConsentError = () => {
+  document.getElementById("consentError").style.display = "none";
 };

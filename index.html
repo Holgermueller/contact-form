@@ -51,12 +51,24 @@
             <legend>Query Type</legend>
 
             <div class="radio-container">
-              <input type="radio" name="query" id="general" value="general" />
+              <input
+                type="radio"
+                name="query"
+                id="general"
+                value="general"
+                onclick="removeFieldsetError()"
+              />
               <label for="general">General Enquiry</label>
             </div>
 
             <div class="radio-container">
-              <input type="radio" name="query" id="support" value="support" />
+              <input
+                type="radio"
+                name="query"
+                id="support"
+                value="support"
+                onclick="removeFieldsetError()"
+              />
               <label for="support">Support Request</label>
             </div>
           </fieldset>
@@ -66,7 +78,13 @@
           <textarea name="message" id="message" required></textarea>
           <p class="error" id="messageError">This field is required</p>
 
-          <input type="checkbox" name="consent" id="consent" required />
+          <input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            onclick="removeConsentError()"
+            required
+          />
           <label for="consent"> I consent to being contacted by the team</label>
           <p class="error" id="consentError">
             To submit this form, please consent to being contacted
