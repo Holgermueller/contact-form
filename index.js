@@ -3,6 +3,7 @@
 let firstName = document.getElementById("firstName");
 let lastName = document.getElementById("lastName");
 let email = document.getElementById("email");
+
 let message = document.getElementById("message");
 
 let radioVal;
@@ -16,8 +17,6 @@ radios.forEach((radio) => {
 });
 
 const submitForm = () => {
-  let checked = document.getElementById("consent").checked;
-
   document.onkeyup = function () {
     let fNameError = document.getElementById("firstNameError");
     let fName = document.getElementById("firstName");
@@ -46,11 +45,19 @@ const submitForm = () => {
     messageError.style.display = "none";
   };
 
+  let reg =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let result = reg.test(email.value);
+
+  let checked = document.getElementById("consent").checked;
+
   if (firstName.value === "") {
     document.getElementById("firstNameError").style.display = "block";
   } else if (lastName.value === "") {
     document.getElementById("lastNameError").style.display = "block";
   } else if (email.value === "") {
+    document.getElementById("emailError").style.display = "block";
+  } else if (result == false) {
     document.getElementById("emailError").style.display = "block";
   } else if (radioVal === undefined) {
     document.getElementById("fieldSetError").style.display = "block";
