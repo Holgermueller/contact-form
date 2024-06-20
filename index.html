@@ -39,19 +39,37 @@
           <div class="name-container">
             <div class="first-last-container">
               <label for="firstName">First Name</label>
-              <input type="text" name="firstName" id="firstName" required />
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                onkeydown="removeFirstNameError()"
+                required
+              />
               <p class="error" id="firstNameError">This field is required</p>
             </div>
 
             <div class="first-last-container">
               <label for="lastName">Last Name</label>
-              <input type="text" name="lastName" id="lastName" required />
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                onkeydown="removeLastNameError()"
+                required
+              />
               <p class="error" id="lastNameError">This field is required</p>
             </div>
           </div>
 
           <label for="email" autocomplete="email">Email</label>
-          <input type="email" name="email" id="email" required />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onkeydown="removeEmailError()"
+            required
+          />
           <p class="error" id="emailError">
             Please enter a valid email address
           </p>
@@ -84,7 +102,12 @@
           <p class="error" id="fieldSetError">Please select a query type</p>
 
           <label for="message">Message</label>
-          <textarea name="message" id="message" required></textarea>
+          <textarea
+            name="message"
+            id="message"
+            onkeydown="removeMessageError()"
+            required
+          ></textarea>
           <p class="error" id="messageError">This field is required</p>
 
           <div class="checkbox-and-label-container">

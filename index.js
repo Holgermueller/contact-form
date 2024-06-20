@@ -17,34 +17,6 @@ radios.forEach((radio) => {
 });
 
 const submitForm = () => {
-  document.onkeyup = function () {
-    let fNameError = document.getElementById("firstNameError");
-    let fName = document.getElementById("firstName");
-    if (fName.value.length === 0) return;
-    fNameError.style.display = "none";
-  };
-
-  document.onkeyup = function () {
-    let lNameError = document.getElementById("lastNameError");
-    let lName = document.getElementById("lastName");
-    if (lName.value.length === 0) return;
-    lNameError.style.display = "none";
-  };
-
-  document.onkeyup = function () {
-    let emailError = document.getElementById("emailError");
-    let email = document.getElementById("email");
-    if (email.value.length === 0) return;
-    emailError.style.display = "none";
-  };
-
-  document.onkeyup = function () {
-    let messageError = document.getElementById("messageError");
-    let message = document.getElementById("message");
-    if (message.value.length === 0) return;
-    messageError.style.display = "none";
-  };
-
   let reg =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let result = reg.test(email.value);
@@ -71,6 +43,34 @@ const submitForm = () => {
 
     console.log("success");
   }
+};
+
+const removeFirstNameError = () => {
+  let fNameError = document.getElementById("firstNameError");
+  let fName = document.getElementById("firstName");
+  if (fName.value.length === 0) return;
+  fNameError.style.display = "none";
+};
+
+const removeLastNameError = () => {
+  let lNameError = document.getElementById("lastNameError");
+  let lName = document.getElementById("lastName");
+  if (lName.value.length === 0) return;
+  lNameError.style.display = "none";
+};
+
+const removeEmailError = () => {
+  let emailError = document.getElementById("emailError");
+  let email = document.getElementById("email");
+  if (email.value.length === 0) return;
+  emailError.style.display = "none";
+};
+
+const removeMessageError = () => {
+  let messageError = document.getElementById("messageError");
+  let message = document.getElementById("message");
+  if (message.value.length === 0) return;
+  messageError.style.display = "none";
 };
 
 const removeFieldsetError = () => {
