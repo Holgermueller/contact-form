@@ -40,8 +40,7 @@ const submitForm = () => {
   } else {
     window.scrollTo({ top: 0, behavior: "smooth" });
     document.getElementById("success").style.display = "block";
-
-    console.log("success");
+    document.getElementById("contactForm").reset();
   }
 };
 
