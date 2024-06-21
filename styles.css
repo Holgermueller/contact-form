@@ -52,18 +52,15 @@ legend {
   padding-top: 32px;
 }
 
-label[for="firstName"]:after,
-label[for="lastName"]:after,
-label[for="email"]:after,
-label[for="message"]:after,
-label[for="consent"]:after,
-legend::after {
-  content: " *";
-}
-
 input:focus,
 textarea:focus {
   border: 2px solid hsl(169, 82%, 27%);
+  outline: none;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  border: 2px solid hsl(0, 66%, 54%);
   outline: none;
 }
 
@@ -211,7 +208,13 @@ h2 {
     cursor: pointer;
   }
 
+  input:hover,
+  textarea:hover {
+    border: 2px solid hsl(169, 82%, 27%);
+  }
+
   input[type="button"]:hover {
     background-color: hsl(170, 80%, 14%);
+    border: none;
   }
 }

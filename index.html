@@ -38,7 +38,10 @@
         <form action="#" id="contactForm">
           <div class="name-container">
             <div class="first-last-container">
-              <label for="firstName">First Name</label>
+              <label for="firstName"
+                >First Name
+                <span aria-label="required"> *</span>
+              </label>
               <input
                 type="text"
                 name="firstName"
@@ -50,7 +53,9 @@
             </div>
 
             <div class="first-last-container">
-              <label for="lastName">Last Name</label>
+              <label for="lastName"
+                >Last Name<span aria-label="required"> *</span></label
+              >
               <input
                 type="text"
                 name="lastName"
@@ -62,7 +67,7 @@
             </div>
           </div>
 
-          <label for="email">Email</label>
+          <label for="email">Email<span aria-label="required"> *</span></label>
           <input
             type="email"
             name="email"
@@ -75,7 +80,7 @@
           </p>
 
           <fieldset id="queryType">
-            <legend>Query Type</legend>
+            <legend>Query Type<span aria-label="required"> *</span></legend>
 
             <div class="radio-container">
               <input
@@ -101,7 +106,9 @@
           </fieldset>
           <p class="error" id="fieldSetError">Please select a query type</p>
 
-          <label for="message">Message</label>
+          <label for="message"
+            >Message<span aria-label="required"> *</span></label
+          >
           <textarea
             name="message"
             id="message"
@@ -119,12 +126,18 @@
               required
             />
             <label for="consent">
-              I consent to being contacted by the team</label
+              I consent to being contacted by the team<span
+                aria-label="required"
+              >
+                *</span
+              ></label
             >
           </div>
           <p class="error" id="consentError">
             To submit this form, please consent to being contacted
           </p>
+
+          <p><small>* denotes required field</small></p>
 
           <input
             onclick="submitForm()"

@@ -10,6 +10,7 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -44,6 +45,10 @@ Users should be able to:
 ### What I learned
 
 This challenge gave me a deeper knowledge of form validation.
+
+### Useful Resources
+
+- [MDN's Docs on Client-Side Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 
 ## Author
 

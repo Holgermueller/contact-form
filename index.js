@@ -23,17 +23,17 @@ const submitForm = () => {
 
   let checked = document.getElementById("consent").checked;
 
-  if (firstName.value === "") {
+  if (firstName.value === "" || firstName.value == null) {
     document.getElementById("firstNameError").style.display = "block";
-  } else if (lastName.value === "") {
+  } else if (lastName.value === "" || lastName.value == null) {
     document.getElementById("lastNameError").style.display = "block";
-  } else if (email.value === "") {
+  } else if (email.value === "" || email.value == null) {
     document.getElementById("emailError").style.display = "block";
   } else if (result == false) {
     document.getElementById("emailError").style.display = "block";
   } else if (radioVal === undefined) {
     document.getElementById("fieldSetError").style.display = "block";
-  } else if (message.value === "") {
+  } else if (message.value === "" || message.value == null) {
     document.getElementById("messageError").style.display = "block";
   } else if (checked === false) {
     document.getElementById("consentError").style.display = "block";
